@@ -11,6 +11,9 @@ document.querySelector("#newNote").addEventListener("click", () => {
 let notesListRootElement = document.querySelector(".notelist");
 let notes = [];
 
+// define variable to store currently active Note 
+let currentNote = '';
+
 function renderElementToScreen() {
   if (localStorage.getItem("notes")) {
     notes = JSON.parse(localStorage.getItem("notes"));
@@ -71,6 +74,8 @@ function renderNoteToList(note, uniqueID) {
       removeElementFromNoteList(uniqueID);
       localStorage.clear();
     } else {
+      // Assign UniqueID to global variable currentNote
+      currentNote = uniqueID;
       document.getElementById("popupCreate").style.display = "none";
       document.getElementById("popupNote").style.display = "block";
     }
@@ -100,9 +105,13 @@ function renderNoteToList(note, uniqueID) {
       let task = {
         name: document.querySelector("#taskname").value,
       };
-      note.tasks.push(task);
+      // Add new Task to currently selcted Note
+      notes.forEach((note) => {
+        if (note.uniqueID === currentNote) {
+            note.tasks.push(task);
+        }
+    });
       localStorage.setItem("notes", JSON.stringify(notes));
-      addTaskToLocalStorage(task, uniqueID);
       renderTaskToList(task, uniqueID);
       document.getElementById("popupTask").style.display = "none";
       document.getElementById("popupNote").style.display = "block";
@@ -156,6 +165,20 @@ function addTaskToLocalStorage(task, uniqueID) {
   tasks.push(task);
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+
+// function addTaskToLocalStorage(task, uniqueID, noteID) {
+//   task = { ...task, uniqueID };
+//   tasks.push(task);
+//   notes = JSON.parse(localStorage.getItem("notes"));
+//   notes.forEach((note) => {
+//       if (note.uniqueID === noteID) {
+//           note.tasks = tasks;
+//       }
+//   });
+//   localStorage.setItem("notes", JSON.stringify(notes));
+// }
+
+
 
 document.querySelector("#deletAllenotes").addEventListener("click", () => {
   document.querySelectorAll(".note").forEach((note) => {
