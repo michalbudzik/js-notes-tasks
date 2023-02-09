@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoteLand</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script async src="./index.js"></script>
+  </head>
+  <body>
+    <section class="one" onclick="startApp()">
+      <span>
+        <img src="./images/noteland.png" alt="">
+        <h1>NoteLand</h1>
+      </span>
+      <div id="hideMeAfter15Seconds">
+        <p>This is a simple Notes Keeping application, which helps you to keep track of your important Data and is also very helpfull in your daily life.</p>
+        <p>The intresting thing is you can add you tasks related to your notes and delete it when compleated.</p>
+    </div>
+    </section>
+    <section class="two">
+      <div class="left">
+        <div class="top">
+          <span>
+            <img src="./images/noteland.png" alt="" />
+            <h1>Note Land</h1>
+          </span>
+        </div>
+        <section class="notelist"></section>
+        <div class="bottum">
+          <button id="newNote">NEW NOTE</button>
+        </div>
+      </div>
+      <div class="right">
+        <div id="removeDiv">
+          <img src="./images/file.png" alt="" />
+          <h2><span class="notesFounded"></span> NOTES FOUNDED</h2>
+          <h4>ADD SOME NOTES FROM THE LEFT COLUMN</h4>
+        </div>
+      </div>
+      <div class="createNote">
+        <div id="popupCreate">
+          <div class="into">
+            <div class="button">&times;</div>
+            <input id="createNoteTitle" placeholder=" NOTE TITLE" type="text" />
+            <textarea
+              id="createNoteContent"
+              placeholder="NOTE DESCRIPTION"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="suparate">
+            <button id="createNoteButton">SAVE NOTE HERE!</button>
+          </div>
+        </div>
+      </div>
+      <section class="editNote">
+        <div id="popupNote">
+          <div class="diveded">
+            <header>
+              <span class="headrright"></span>
+              <div class="headerleft">
+                <button id="newtask">NEW TASK</button>
+                <button id="deletAllenotes">DELETE ALL NOTES</button>
+                <div id="button">&times;</div>
+              </div>
+            </header>
+            <div id="main">
+              <div class="notecontent"></div>
+              <div class="taskTitle">
+                <h3>Tasks List</h3>
+              <div id="tasklist" ></div>
+            
+          </div>
+        </div>
+      </section>
+      <section class="AddTask">
+        <div id="popupTask">
+          <input id="taskname" type="text" placeholder="TASK NAME" />
+          <button id="CreateTask">CREATE TASK</button>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

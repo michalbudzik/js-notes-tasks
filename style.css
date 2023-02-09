@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#hideMeAfter15Seconds {
+  background: pink;
+  margin-top: 200px;
+  color: red;
+  animation: hideAnimation 0s ease-in 15s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
+/* one */
+
+.one {
+  background-color: #282e44;
+  /* display: flex; */
+  /* justify-content: center; */
+  text-align: center;
+  /* align-items: center; */
+  height: 100vh;
+}
+.one span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.one img {
+  height: 70px;
+  margin-top: 350px;
+}
+.one h1 {
+  color: white;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: 350px;
+}
+
+/* two */
+
+.two {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 25vw;
+  background-image: linear-gradient( 64.5deg,  rgba(245,116,185,1) 14.7%, rgba(89,97,223,1) 88.7% );
+}
+
+.top span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 20px;
+}
+
+.top img {
+  height: 70px;
+}
+
+.top h1 {
+  color: white;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.notelist {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 90vh;
+  overflow: scroll;
+  margin-bottom: 1rem;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 150px;
+  background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% );
+  border: #444444;
+  width: 18vw;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow: scroll;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.note button {
+  background-image: linear-gradient( 100.2deg,  rgba(255,53,53,1) 49.4%, rgba(0,0,0,1) 129.8% );
+  color: coral;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 20px 50px;
+  border: none;
+  margin: 0.8rem;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+.note h1 {
+  color: goldenrod;
+  font-size: 1.8rem;
+}
+.note p {
+  font-family: none;
+  font-size: 1.4rem;
+  color: papayawhip;
+}
+.note h3 {
+  font-family: "none";
+  color: #00569e;
+  font-size: 1.5rem;
+}
+
+.tasklist {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: -10rem;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.task input {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.task p {
+  font-family: none;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.bottum {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.bottum button {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 0.5rem 5.5rem;
+  border-radius: 12px;
+  border: none;
+  background-image: radial-gradient( circle 400px at 6.8% 8.3%,  rgba(255,244,169,1) 0%, rgba(255,244,234,1) 100.2% );
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 75vw;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
+}
+
+.right img {
+  height: 450px;
+  margin-bottom: 1rem;
+}
+
+.right h2 {
+  color: white;
+  margin-bottom: 1.7rem;
+  font-family: "Poppins";
+  font-weight: none;
+  text-align: center;
+}
+
+.right h4 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: none;
+  font-weight: none;
+  font-style: small;
+}
+
+.createNote {
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.8rem;
+  width: 70vh;
+  border-radius: 20px;
+  font-weight: bold;
+  position: absolute;
+}
+
+#popupCreate {
+  display: none;
+  position: fixed;
+  top: 9rem;
+  bottom: 10rem;
+  left: 43rem;
+}
+
+.into {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: whitesmoke;
+  padding: 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.button {
+  display: flex;
+  justify-content: end;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: xx-large;
+}
+
+#createNoteTitle {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #00695c;
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  padding: 0.7rem;
+  background: none;
+  font-weight: bold;
+}
+
+textarea {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #00695c;
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: none;
+  font-family: none;
+}
+
+.suparate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#createNoteButton {
+  width: 45vh;
+  font-size: medium;
+  background-image: linear-gradient( 293.5deg,  rgba(181,149,208,1) 3.2%, rgba(251,148,207,1) 9.9%, rgba(181,149,208,1) 22.9%, rgba(251,148,207,1) 36.4%, rgba(181,149,208,1) 50.1%, rgba(251,148,207,1) 61.1%, rgba(181,149,208,1) 71.2%, rgba(251,148,207,1) 84.2%, rgba(181,149,208,1) 92.2% );
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  border: none;
+  margin: 0.8rem 0;
+  border-radius: 12px;
+  font-size: 1.3rem;
+}
+
+.editNote {
+  position: absolute;
+}
+
+#popupNote {
+  display: none;
+  position: fixed;
+  top: 0rem;
+  left: 21.5rem;
+}
+
+.diveded {
+  display: grid;
+  grid-template-rows: 16% 84%;
+  background: #00569e;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  height: 10vh;
+  width: 79vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: radial-gradient( circle farthest-corner at 97.4% 91.4%,  rgba(204,0,107,1) 0%, rgba(0,0,0,1) 82.4% );
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.headrright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  margin: 2rem;
+  color: whitesmoke;
+}
+
+.headerleft {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 2.5rem;
+  width: 30%;
+}
+
+#newtask {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.79rem;
+  color: white;
+  border: none;
+  font-weight: none;
+  border-radius: 12px;
+  background-image: linear-gradient( 90.1deg,  rgba(175,237,255,1) 10.9%, rgba(255,163,252,1) 63.8% );
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+#deletAllenotes {
+  text-align: center;
+  width: 100%;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  font-size: 0.79rem;
+  color: white;
+  border: none;
+  font-weight: none;
+  border-radius: 12px;
+  background-image: radial-gradient( circle farthest-corner at 114.1% 113.8%,  rgba(236,150,48,1) 0%, rgba(231,16,2,1) 90.1% );
+  cursor: pointer;
+}
+
+#button {
+  margin-bottom: 4rem;
+  margin-left: 1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.2rem 0.2rem 0.2rem 0.3rem;
+  border-radius: 20%;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  width: 60vw;
+  height: 75vh;
+  margin-left: 7rem;
+  margin-bottom: -3rem;
+  margin-top: 2rem;
+  background: white;
+  font-family: none;
+  border-radius: 20px;
+  font-size: 1.3rem;
+}
+
+#main p {
+  font-family: "none";
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+}
+
+#main h3 {
+  font-family: "none";
+  color: #00569e;
+  font-size: 1.8rem;
+  margin: 0.5rem 1rem;
+}
+
+#main .tasklist {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#main .task {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.2em 1.4rem;
+}
+
+#main .task input {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+#main .task p {
+  font-family: none;
+  font-weight: lighter;
+  font-size: 1.4rem;
+}
+
+.AddTask {
+  position: absolute;
+}
+
+#popupTask {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 15rem;
+  left: 38rem;
+  background: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 20px;
+}
+
+#popupTask input {
+  width: 100%;
+  margin-bottom: 2rem;
+  font-weight: none;
+  font-family: none;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  font-size: 1.4rem;
+}
+
+#popupTask button {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.5rem 5rem;
+  border-radius: 12px;
+  border: none;
+  background-image: linear-gradient( 181.3deg,  rgba(179,16,16,1) 2.5%, rgba(255,227,91,1) 89.3% );
+  color: white;
+  cursor: pointer;
+}
+
